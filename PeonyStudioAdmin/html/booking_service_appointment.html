@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="../style_sheet/home.css">
+
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <link rel="stylesheet" href="../style_sheet/Font/themify-icons-font/themify-icons/themify-icons.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+
+    <title>Quản lý áo cưới</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="../resources/images/logo_admin.jpg" style="width: 3rem; height: 3rem;" alt="">
+            </div>
+
+            <span class="logo_name">MysticMaster</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="home.html">
+                        <i class="uil ti-home"></i>
+                        <span class="link-name">Tổng quan</span>
+                    </a></li>
+                <li id="li_manage"><a>
+                        <i class="uil ti-layers-alt"></i>
+                        <span class="link-name">Quản lý</span>
+                    </a>
+                    <ul id="list_manage" class="nav-links">
+                        <li><a href="wedding_dress_manage.html">
+                                <i class="uil ti-package"></i>
+                                <span class="link-name">Áo cưới</span>
+                            </a></li>
+                        <li><a href="services_manage.html">
+                                <i class="uil ti-layers"></i>
+                                <span class="link-name">Dịch vụ</span>
+                            </a></li>
+                        <li><a href="news_manage.html">
+                                <i class="uil ti-receipt"></i>
+                                <span class="link-name">Tin tức</span>
+                            </a></li>
+                    </ul>
+                </li>
+                <li id="li_booking"><a>
+                        <i class="uil ti-notepad"></i>
+                        <span class="link-name">Lịch đặt</span>
+                    </a>
+                    <ul id="list_booking" class="nav-links">
+                        <li><a href="booking_wedding_dress_rental.html">
+                                <i class="uil ti-package"></i>
+                                <span class="link-name">Lịch thuê áo cưới</span>
+                            </a></li>
+                        <li><a href="#">
+                                <i class="uil ti-layers"></i>
+                                <span class="link-name">Lịch dịch vụ</span>
+                            </a></li>
+                        <li><a href="#">
+                                <i class="uil ti-headphone-alt"></i>
+                                <span class="link-name">Lịch tư vấn</span>
+                            </a></li>
+                    </ul>
+                </li>
+                </li>
+                <li><a href="#">
+                        <i class="uil ti-bar-chart"></i>
+                        <span class="link-name">Thống kê</span>
+                    </a></li>
+                <li><a href="chatting.html">
+                        <i class="uil ti-comment"></i>
+                        <span class="link-name">Tin nhắn</span>
+                    </a></li>
+            </ul>
+
+            <ul class="logout-mode">
+                <li><a href="#">
+                        <i class="uil uil-signout"></i>
+                        <span class="link-name">Đăng xuất</span>
+                    </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                        <span class="link-name">Giao diện</span>
+                    </a>
+
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <img src="../resources/images/logo_admin.jpg" style="width: 2.5rem; height: 2.5rem;" alt="">
+        </div>
+
+        <div class="dash-content">
+
+            <div class="mb-4 flex justify-between items-center">
+                <h2 class="text-2xl text-gray-700 dark:text-white">Quản lý áo cưới</h2>
+
+                <div class="search-box">
+                    <i class="uil uil-search"></i>
+                    <input type="text" placeholder="Tìm kiếm...">
+                </div>
+
+                <a href="wedding_dress_manage/add.html" class="ti-plus text-2xl text-gray-700 dark:text-white"></a>
+            </div>
+
+            <div class="overview box relative overflow-x-auto shadow-md sm:rounded-lg">
+                <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                    <thead
+                        class=" text-gray-700 border border-gray-50 dark:border-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-white">
+                        <tr>
+                            <th scope="col" class="px-8 py-4">
+                                Mã lịch đặt
+                            </th>
+                            <th scope="col" class="px-1 py-4">
+                                Ngày đặt lịch
+                            </th>
+                            <th scope="col" class="px-4 py-4">
+                                Mã khách hàng
+                            </th>
+                            <th scope="col" class="px-2 py-4">
+                                Mã dịch vụ
+                            </th>
+                            <th scope="col" class="px-2 py-4 text-center">
+                                Trạng thái
+                            </th>
+                            <th scope="col" class="px-1 py-4 text-center">
+                                Thao tác
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="wedding_dress_tbody">
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="../java_script/home.js"></script>
+    <script src="../java_script/booking_service_appointment.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+</body>
+
+</html>

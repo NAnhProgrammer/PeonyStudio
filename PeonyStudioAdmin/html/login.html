@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="../style_sheet/login.css">
+
+    <title>Login form - Bedimcode</title>
+</head>
+
+<body>
+    <div class="login">
+        <img src="../resources/images/background_login.jpg" alt="image" class="login__bg">
+
+        <div style="display: flex; flex-direction: row; justify-content: flex-end; width: 100%; height: 100%;">
+            <form action="" class="login__form">
+                <h1 class="name">Peony Studio</h1>
+
+                <h3 class="login__title">Đăng nhập</h3>
+
+                <div class="login__inputs">
+                    <div>
+                        <div class="login__box">
+                            <input id="ip_username" type="text" placeholder="Tên đăng nhập" class="login__input">
+                            <i class="ri-mail-fill"></i>
+                        </div>
+
+                        <p id="err_username" class="login_config"></p>
+                    </div>
+
+                    <div>
+                        <div class="login__box">
+                            <input id="ip_password" type="password" placeholder="Mật khẩu" class="login__input">
+                            <i class="ri-lock-2-fill"></i>
+                        </div>
+
+                        <p id="err_password" class="login_config"></p>
+                    </div>
+
+                </div>
+
+                <div class="login__check">
+                    <div class="login__check-box">
+                        <input type="checkbox" class="login__check-input" id="user-check">
+                        <label for="user-check" class="login__check-label">Lưu tài khoản</label>
+                    </div>
+
+                    <a href="#" class="login__forgot">Quên mật khẩu?</a>
+                </div>
+
+                <button id="btn_login" type="submit" class="login__button">Đăng nhập</button>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../java_script/login.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="../style_sheet/home.css">
+
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <link rel="stylesheet" href="../style_sheet/Font/themify-icons-font/themify-icons/themify-icons.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+
+    <title>Trò chuyện</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="../resources/images/logo_admin.jpg" style="width: 3rem; height: 3rem;" alt="">
+            </div>
+
+            <span class="logo_name">MysticMaster</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="home.html">
+                        <i class=" ti-home"></i>
+                        <span class="link-name">Tổng quan</span>
+                    </a></li>
+                <li id="li_manage"><a>
+                        <i class=" ti-layers-alt"></i>
+                        <span class="link-name">Quản lý</span>
+                    </a>
+                    <ul id="list_manage" class="nav-links">
+                        <li><a href="wedding_dress_manage.html">
+                                <i class=" ti-package"></i>
+                                <span class="link-name">Áo cưới</span>
+                            </a></li>
+                        <li><a href="services_manage.html">
+                                <i class=" ti-layers"></i>
+                                <span class="link-name">Dịch vụ</span>
+                            </a></li>
+                        <li><a href="news_manage.html">
+                                <i class=" ti-receipt"></i>
+                                <span class="link-name">Tin tức</span>
+                            </a></li>
+                    </ul>
+                </li>
+                <li id="li_booking"><a>
+                        <i class=" ti-notepad"></i>
+                        <span class="link-name">Lịch đặt</span>
+                    </a>
+                    <ul id="list_booking" class="nav-links">
+                        <li><a href="booking_wedding_dress_rental.html">
+                                <i class=" ti-package"></i>
+                                <span class="link-name">Lịch thuê áo cưới</span>
+                            </a></li>
+                        <li><a href="booking_service_appointment.html">
+                                <i class=" ti-layers"></i>
+                                <span class="link-name">Lịch dịch vụ</span>
+                            </a></li>
+                        <li><a href="#">
+                                <i class=" ti-headphone-alt"></i>
+                                <span class="link-name">Lịch tư vấn</span>
+                            </a></li>
+                    </ul>
+                </li>
+                </li>
+                <li><a href="#">
+                        <i class=" ti-bar-chart"></i>
+                        <span class="link-name">Thống kê</span>
+                    </a></li>
+                <li><a href="chatting.html">
+                        <i class=" ti-comment"></i>
+                        <span class="link-name">Tin nhắn</span>
+                    </a></li>
+            </ul>
+
+            <ul class="logout-mode">
+                <li><a href="#">
+                        <i class="uil uil-signout"></i>
+                        <span class="link-name">Đăng xuất</span>
+                    </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                        <span class="link-name">Giao diện</span>
+                    </a>
+
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <img src="../resources/images/logo_admin.jpg" style="width: 2.5rem; height: 2.5rem;" alt="">
+        </div>
+
+        <div class="dash-content">
+
+            <h2 class="text-2xl text-gray-700 dark:text-white mb-2">Danh sách trò chuyện</h2>
+
+            <div class="grid grid-cols-4 gap-4">
+                <div class="col-span-1" id="chats-body">
+
+                </div>
+
+                <div style="height: 80vh;"
+                    class="flex flex-col justify-between col-span-3 bg-gray-50 border border-gray-50 rounded-lg group-hover:bg-white dark:bg-gray-600 dark:border-gray-700 mb-2">
+
+                    <div>
+                        <div class="bg-gray-200 dark:bg-gray-800 p-3 rounded-lg justify-center items-center flex">
+                            <p id="chat-room" class="text-lg text-gray-700 dark:text-white">Trò chuyện</p>
+                        </div>
+                        <div id="message-container" style=" overflow-y: auto; height: 65vh; scrollbar-width: none;" class="p-2">
+
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-200 dark:bg-gray-800 p-1 rounded-lg justify-center items-center flex justify-between m-2">
+                        <input style="background-color: inherit;" id="text-message" class="text-sm text-gray-700 dark:text-white border-0 outline-none focus:ring-0 placeholder-white  w-full" type="text" placeholder="Nhập tin nhắn...">
+                        <span id="send" class=" mx-2 text-xl text-gray-700 dark:text-white ti-arrow-right"></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="../java_script/home.js"></script>
+    <script src="../java_script//chatting.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+</body>
+
+</html>
